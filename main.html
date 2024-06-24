@@ -5,133 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferrari Store</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        .main-container {
-            text-align: center;
-            padding: 40px;
-            background-color: #fff;
-            max-width: 800px;
-            margin: 20px auto;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            font-size: 36px;
-            color: #333;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        p {
-            text-align: justify;
-            margin-bottom: 20px;
-            color: #666;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
-        }
-
-        audio {
-            margin-top: 20px;
-            width: 100%;
-            max-width: 400px;
-            display: block;
-            margin: 20px auto;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Ferrari Store</h1>
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#modelos">Modelos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Ferrari Store</h1>
+        <nav>
+            <a href="#inicio">Inicio</a> | <a href="#modelos">Modelos</a> | <a href="#contacto">Contacto</a>
+        </nav>
     </header>
 
-    <section id="inicio" class="hero">
-        <div class="container">
-            <h2>Bienvenido a la Ferrari Store</h2>
-            <p>Descubre la emoción de conducir uno de los automóviles más prestigiosos del mundo.</p>
-            <a href="#modelos" class="btn">Ver Modelos</a>
+    <section id="inicio" class="main-container">
+        <h2>Bienvenido a la Ferrari Store</h2>
+        <p>Descubre la emoción de conducir uno de los automóviles más prestigiosos del mundo.</p>
+        <a href="#modelos" class="btn">Ver Modelos</a>
+    </section>
+
+    <section id="modelos" class="main-container">
+        <h2>Nuestros Modelos</h2>
+        <div class="modelos-grid">
+            <div class="modelo">
+                <img src="img1.jpg" alt="img1">
+                <h3>Ferrari Modelo 1</h3>
+                <p>Descripción: El Ferrari 488 GTB es un superdeportivo que combina un diseño aerodinámico elegante con un motor V8 twin-turbo de 3.9 litros.</p>
+                <a href="#" class="btn">Ver Detalles</a>
+            </div>
+            <!-- Repite la estructura para los demás modelos -->
         </div>
     </section>
 
-    <section id="modelos" class="modelos">
-        <div class="container">
-            <h2>Nuestros Modelos</h2>
-            <div class="modelos-grid">
-                <div class="modelo">
-                    <img src="img1.jpg" alt="img1">
-                    <h3>Ferrari Modelo 1</h3>
-                    <p>Descripción: El Ferrari 488 GTB es un superdeportivo que combina un diseño aerodinámico elegante con un motor V8 twin-turbo de 3.9 litros. Con una potencia de más de 650 caballos de fuerza, el 488 GTB ofrece una aceleración impresionante y un manejo preciso, lo que lo convierte en una máquina formidable tanto en carretera como en pista..</p>
-                    <a href="#" class="btn">Ver Detalles</a>
-                </div>
-                <div class="modelo">
-                    <img src="img2.jpg" alt="img2.jpg">
-                    <h3>Ferrari Modelo 2</h3>
-                    <p>Descripción: El Ferrari Portofino es un gran turismo descapotable de alto rendimiento. Equipado con un motor V8 twin-turbo de 3.9 litros, el Portofino entrega una combinación perfecta de potencia y confort. Su diseño elegante y su interior lujoso lo hacen ideal para largos viajes con estilo y velocidad.</p>
-                    <a href="#" class="btn">Ver Detalles</a>
-                </div>
-                <div class="modelo">
-                    <img src="img3.jpg" alt="img3.jpg">
-                    <h3>Ferrari Modelo 3</h3>
-                    <p>Descripción: El Ferrari F8 Tributo es un superdeportivo que rinde homenaje a la historia y la excelencia de Ferrari en el rendimiento. Con un motor V8 twin-turbo de 3.9 litros mejorado, el F8 Tributo produce más de 700 caballos de fuerza. Su diseño aerodinámico avanzado y su chasis ligero ofrecen una experiencia de conducción excepcional en cualquier situación.</p>
-                    <a href="#" class="btn">Ver Detalles</a>
-                </div>
-                <div class="modelo">
-                    <img src="ferrari4.jpg" alt="Ferrari Modelo 4">
-                    <h3>Ferrari Modelo 4</h3>
-                    <p>Descripción del modelo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#" class="btn">Ver Detalles</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contacto" class="contacto">
-        <div class="container">
-            <h2>Contacto</h2>
-            <div class="contacto-form">
-                <form action="procesar-contacto.php" method="post">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                    <input type="submit" value="Enviar Mensaje" class="btn">
-                </form>
-            </div>
-        </div>
+    <section id="contacto" class="main-container">
+        <h2>Contacto</h2>
+        <form action="procesar-contacto.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            <input type="submit" value="Enviar Mensaje" class="btn">
+        </form>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Ferrari Store. Todos los derechos reservados.</p>
-        </div>
+        <p>&copy; 2024 Ferrari Store. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
