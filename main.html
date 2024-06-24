@@ -83,9 +83,241 @@
         .hidden-field {
             display: none;
         }
+
+        /* Estilos adicionales para la página de ventas */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background-image: url('ferrari-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        .modelos {
+            padding: 40px 0;
+            background-color: #fff;
+        }
+
+        .modelos h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .modelos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .modelo {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .modelo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .modelo h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .modelo p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .contacto {
+            background-color: #f0f0f0;
+            padding: 40px 0;
+        }
+
+        .contacto h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contacto form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .contacto form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .contacto form input[type="text"],
+        .contacto form input[type="email"],
+        .contacto form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contacto form textarea {
+            resize: vertical;
+        }
+
+        .contacto form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contacto form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h1>Venta de Ferrari</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#modelos">Modelos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h2>Bienvenido a la venta de Ferrari</h2>
+            <p>Descubre la emoción de conducir uno de los automóviles más prestigiosos del mundo.</p>
+            <a href="#modelos" class="btn">Ver Modelos</a>
+        </div>
+    </section>
+
+    <section id="modelos" class="modelos">
+        <div class="container">
+            <h2>Nuestros Modelos</h2>
+            <div class="modelos-grid">
+                <div class="modelo">
+                    <img src="ferrari1.jpg" alt="Ferrari Modelo 1">
+                    <h3>Ferrari Modelo 1</h3>
+                    <p>Descripción del modelo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">Ver Detalles</a>
+                </div>
+                <div class="modelo">
+                    <img src="ferrari2.jpg" alt="Ferrari Modelo 2">
+                    <h3>Ferrari Modelo 2</h3>
+                    <p>Descripción del modelo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">Ver Detalles</a>
+                </div>
+                <div class="modelo">
+                    <img src="ferrari3.jpg" alt="Ferrari Modelo 3">
+                    <h3>Ferrari Modelo 3</h3>
+                    <p>Descripción del modelo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form action="procesar-contacto.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                <input type="submit" value="Enviar Mensaje" class="btn">
+            </form>
+        </div>
+    </section>
+
     <div class="main-container">
         <h1>Información sobre Ferrari</h1>
         <p>Ferrari es un fabricante italiano de automóviles de lujo y deportivos con una larga historia en la fabricación de vehículos de alto rendimiento. Conocida por su participación en la Fórmula 1, los automóviles de Ferrari destacan por su diseño distintivo, potencia y exclusividad, convirtiéndose en un símbolo de estatus y prestigio en el mundo del automovilismo de lujo.</p>
@@ -107,5 +339,12 @@
             </form>
         </div>
     </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Venta de Ferrari. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
+
