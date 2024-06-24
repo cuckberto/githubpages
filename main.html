@@ -8,10 +8,11 @@
     <style>
         /* Estilos generales */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Ferrari', Arial, sans-serif; /* Agregar la fuente de Ferrari o similar */
+            background: linear-gradient(to right, #DC0000, #FFFFFF); /* Colores característicos de Ferrari */
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
 
         .container {
@@ -24,6 +25,7 @@
             background-color: #333;
             color: #fff;
             padding: 10px 0;
+            margin-bottom: 20px; /* Espacio entre el encabezado y la siguiente sección */
         }
 
         header h1 {
@@ -67,12 +69,21 @@
         h1 {
             font-size: 24px;
             color: #333;
+            margin-bottom: 20px; /* Espacio bajo el título */
         }
 
         p {
             text-align: justify;
             margin-bottom: 20px;
             color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto; /* Espacio vertical en imágenes */
+            border-radius: 8px;
         }
 
         .hero {
@@ -82,6 +93,7 @@
             color: #fff;
             text-align: center;
             padding: 100px 0;
+            margin-bottom: 40px; /* Espacio bajo la sección de héroe */
         }
 
         .hero h2 {
@@ -111,6 +123,7 @@
         .modelos {
             padding: 40px 0;
             background-color: #f9f9f9;
+            margin-bottom: 40px; /* Espacio bajo la sección de modelos */
         }
 
         .modelos h2 {
@@ -123,6 +136,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
+            justify-items: center;
         }
 
         .modelo {
@@ -137,7 +151,7 @@
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 20px; /* Espacio bajo cada modelo */
         }
 
         .modelo h3 {
@@ -154,6 +168,7 @@
         .contacto {
             background-color: #f0f0f0;
             padding: 40px 0;
+            margin-bottom: 40px; /* Espacio bajo la sección de contacto */
         }
 
         .contacto h2 {
@@ -211,14 +226,12 @@
             color: #fff;
             text-align: center;
             padding: 10px 0;
-            position: absolute;
-            bottom: 0;
             width: 100%;
         }
 
         /* Estilos para el formulario de suscripción */
         .subscribe-form {
-            margin-top: 20px;
+            margin-top: 40px; /* Espacio arriba del formulario de suscripción */
             padding: 20px;
             background-color: #f9f9f9;
             border-radius: 8px;
@@ -342,24 +355,26 @@
     <section class="main-container">
         <h1>Información sobre Ferrari</h1>
         <p>Ferrari es un fabricante italiano de automóviles de lujo y deportivos con una larga historia en la fabricación de vehículos de alto rendimiento. Conocida por su participación en la Fórmula 1, los automóviles de Ferrari destacan por su diseño distintivo, potencia y exclusividad, convirtiéndose en un símbolo de estatus y prestigio en el mundo del automovilismo de lujo.</p>
-        <img src="img1.jpg" alt="img" style="max-width: 100%; height: auto;">
+        <img src="img1.jpg" alt="img">
         <audio controls style="margin-top: 20px;">
             <source src="cancion.mp3" type="audio/mpeg">
             Tu navegador no soporta el elemento de audio.
         </audio>
+    </section>
 
-        <!-- Formulario de suscripción con test de teclado -->
-        <div class="subscribe-form">
+    <!-- Formulario de suscripción con test de teclado -->
+    <div class="subscribe-form">
+        <div class="container">
             <h2>Suscríbete para más información</h2>
             <form action="procesar-suscripcion.php" method="post">
                 <label for="email">Ingresa tu correo electrónico:</label>
                 <input type="email" id="email" name="email" required>
-                <p>Por favor, deja este campo en blanco:</p>
+                <p style="display: none;">Por favor, deja este campo en blanco:</p>
                 <input type="text" id="other" name="other" class="hidden-field">
-                <input type="submit" value="Suscribirse">
+                <input type="submit" value="Suscribirse" class="btn">
             </form>
         </div>
-    </section>
+    </div>
 
     <footer>
         <div class="container">
@@ -368,5 +383,3 @@
     </footer>
 </body>
 </html>
-
-
