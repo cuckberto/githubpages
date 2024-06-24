@@ -38,6 +38,7 @@
         }
 
         .subscribe-form input[type="email"], 
+        .subscribe-form input[type="text"], 
         .subscribe-form input[type="submit"] {
             width: calc(100% - 20px);
             padding: 8px;
@@ -54,6 +55,11 @@
         .subscribe-form input[type="submit"]:hover {
             background-color: #45a049;
         }
+
+        /* Estilos para el campo oculto */
+        .hidden-field {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -66,17 +72,17 @@
             Tu navegador no soporta el elemento de audio.
         </audio>
 
-        <!-- Formulario de suscripción -->
+        <!-- Formulario de suscripción con test de teclado -->
         <div class="subscribe-form">
             <h2>Suscríbete para más información</h2>
             <form action="procesar-suscripcion.php" method="post">
                 <label for="email">Ingresa tu correo electrónico:</label>
                 <input type="email" id="email" name="email" required>
+                <p>Por favor, deja este campo en blanco:</p>
+                <input type="text" id="other" name="other" class="hidden-field">
                 <input type="submit" value="Suscribirse">
             </form>
         </div>
     </div>
 </body>
 </html>
-
-
