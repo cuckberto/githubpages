@@ -3,61 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferrari</title>
+    <title>Ferrari Store</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Estilos generales */
         body {
-            font-family: 'Ferrari', Arial, sans-serif; /* Agregar la fuente de Ferrari o similar */
-            background: linear-gradient(to right, #DC0000, #FFFFFF); /* Colores característicos de Ferrari */
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            margin-bottom: 20px; /* Espacio entre el encabezado y la siguiente sección */
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-
-        header nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        header nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        header nav ul li a:hover {
-            text-decoration: underline;
-        }
-
         .main-container {
             text-align: center;
-            padding: 20px;
+            padding: 40px;
             background-color: #fff;
             max-width: 800px;
             margin: 20px auto;
@@ -67,9 +27,10 @@
         }
 
         h1 {
-            font-size: 24px;
+            font-size: 36px;
             color: #333;
-            margin-bottom: 20px; /* Espacio bajo el título */
+            margin-bottom: 20px;
+            text-transform: uppercase;
         }
 
         p {
@@ -82,209 +43,24 @@
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 20px auto; /* Espacio vertical en imágenes */
-            border-radius: 8px;
-        }
-
-        .hero {
-            background-image: url('ferrari-hero.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            text-align: center;
-            padding: 100px 0;
-            margin-bottom: 40px; /* Espacio bajo la sección de héroe */
-        }
-
-        .hero h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #333;
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #555;
-        }
-
-        .modelos {
-            padding: 40px 0;
-            background-color: #f9f9f9;
-            margin-bottom: 40px; /* Espacio bajo la sección de modelos */
-        }
-
-        .modelos h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #333;
-        }
-
-        .modelos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            justify-items: center;
-        }
-
-        .modelo {
-            text-align: center;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            background-color: #fff;
-        }
-
-        .modelo img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 20px; /* Espacio bajo cada modelo */
-        }
-
-        .modelo h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .modelo p {
-            margin-bottom: 10px;
-            color: #666;
-        }
-
-        .contacto {
-            background-color: #f0f0f0;
-            padding: 40px 0;
-            margin-bottom: 40px; /* Espacio bajo la sección de contacto */
-        }
-
-        .contacto h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #333;
-        }
-
-        .contacto form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .contacto form label {
-            display: block;
-            margin-bottom: 8px;
-            color: #555;
-        }
-
-        .contacto form input[type="text"],
-        .contacto form input[type="email"],
-        .contacto form textarea {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        .contacto form textarea {
-            resize: vertical;
-        }
-
-        .contacto form input[type="submit"] {
-            background-color: #333;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .contacto form input[type="submit"]:hover {
-            background-color: #555;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            width: 100%;
-        }
-
-        /* Estilos para el formulario de suscripción */
-        .subscribe-form {
-            margin-top: 40px; /* Espacio arriba del formulario de suscripción */
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            max-width: 600px;
             margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
         }
 
-        .subscribe-form h2 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .subscribe-form label {
+        audio {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 400px;
             display: block;
-            margin-bottom: 10px;
-            color: #555;
-        }
-
-        .subscribe-form input[type="email"], 
-        .subscribe-form input[type="text"], 
-        .subscribe-form input[type="submit"] {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        .subscribe-form input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .subscribe-form input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        /* Estilos para el campo oculto */
-        .hidden-field {
-            display: none;
+            margin: 20px auto;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Venta de Ferrari</h1>
+            <h1>Ferrari Store</h1>
             <nav>
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
@@ -297,7 +73,7 @@
 
     <section id="inicio" class="hero">
         <div class="container">
-            <h2>Bienvenido a la venta de Ferrari</h2>
+            <h2>Bienvenido a la Ferrari Store</h2>
             <p>Descubre la emoción de conducir uno de los automóviles más prestigiosos del mundo.</p>
             <a href="#modelos" class="btn">Ver Modelos</a>
         </div>
@@ -352,33 +128,9 @@
         </div>
     </section>
 
-    <section class="main-container">
-        <h1>Información sobre Ferrari</h1>
-        <p>Ferrari es un fabricante italiano de automóviles de lujo y deportivos con una larga historia en la fabricación de vehículos de alto rendimiento. Conocida por su participación en la Fórmula 1, los automóviles de Ferrari destacan por su diseño distintivo, potencia y exclusividad, convirtiéndose en un símbolo de estatus y prestigio en el mundo del automovilismo de lujo.</p>
-        <img src="img1.jpg" alt="img">
-        <audio controls style="margin-top: 20px;">
-            <source src="cancion.mp3" type="audio/mpeg">
-            Tu navegador no soporta el elemento de audio.
-        </audio>
-    </section>
-
-    <!-- Formulario de suscripción con test de teclado -->
-    <div class="subscribe-form">
-        <div class="container">
-            <h2>Suscríbete para más información</h2>
-            <form action="procesar-suscripcion.php" method="post">
-                <label for="email">Ingresa tu correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-                <p style="display: none;">Por favor, deja este campo en blanco:</p>
-                <input type="text" id="other" name="other" class="hidden-field">
-                <input type="submit" value="Suscribirse" class="btn">
-            </form>
-        </div>
-    </div>
-
     <footer>
         <div class="container">
-            <p>&copy; 2024 Venta de Ferrari. Todos los derechos reservados.</p>
+            <p>&copy; 2024 Ferrari Store. Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>
