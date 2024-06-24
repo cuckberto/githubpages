@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferrari</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
     <style>
+        /* Estilos generales */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
@@ -14,77 +14,12 @@
             padding: 0;
         }
 
-        .main-container {
-            text-align: center;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            background-color: #fff;
-            max-width: 800px;
-            margin: 20px auto;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
-        h1 {
-            font-size: 24px;
-            color: #333;
-        }
-
-        p {
-            text-align: justify;
-            margin-bottom: 20px;
-            color: #666;
-        }
-
-        /* Estilos para el formulario */
-        .subscribe-form {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .subscribe-form h2 {
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .subscribe-form label {
-            display: block;
-            margin-bottom: 8px;
-            color: #555;
-        }
-
-        .subscribe-form input[type="email"], 
-        .subscribe-form input[type="text"], 
-        .subscribe-form input[type="submit"] {
-            width: calc(100% - 20px);
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        .subscribe-form input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .subscribe-form input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        /* Estilos para el campo oculto */
-        .hidden-field {
-            display: none;
-        }
-
-        /* Estilos adicionales para la página de ventas */
         header {
             background-color: #333;
             color: #fff;
@@ -116,6 +51,28 @@
 
         header nav ul li a:hover {
             text-decoration: underline;
+        }
+
+        .main-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            max-width: 800px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+            color: #666;
         }
 
         .hero {
@@ -153,12 +110,13 @@
 
         .modelos {
             padding: 40px 0;
-            background-color: #fff;
+            background-color: #f9f9f9;
         }
 
         .modelos h2 {
             text-align: center;
             margin-bottom: 40px;
+            color: #333;
         }
 
         .modelos-grid {
@@ -172,7 +130,7 @@
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 8px;
-            background-color: #f9f9f9;
+            background-color: #fff;
         }
 
         .modelo img {
@@ -185,6 +143,7 @@
         .modelo h3 {
             font-size: 24px;
             margin-bottom: 10px;
+            color: #333;
         }
 
         .modelo p {
@@ -200,6 +159,7 @@
         .contacto h2 {
             text-align: center;
             margin-bottom: 40px;
+            color: #333;
         }
 
         .contacto form {
@@ -214,6 +174,7 @@
         .contacto form label {
             display: block;
             margin-bottom: 8px;
+            color: #555;
         }
 
         .contacto form input[type="text"],
@@ -224,6 +185,7 @@
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            box-sizing: border-box;
         }
 
         .contacto form textarea {
@@ -252,6 +214,57 @@
             position: absolute;
             bottom: 0;
             width: 100%;
+        }
+
+        /* Estilos para el formulario de suscripción */
+        .subscribe-form {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .subscribe-form h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .subscribe-form label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .subscribe-form input[type="email"], 
+        .subscribe-form input[type="text"], 
+        .subscribe-form input[type="submit"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .subscribe-form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .subscribe-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilos para el campo oculto */
+        .hidden-field {
+            display: none;
         }
     </style>
 </head>
@@ -299,6 +312,12 @@
                     <p>Descripción del modelo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <a href="#" class="btn">Ver Detalles</a>
                 </div>
+                <div class="modelo">
+                    <img src="ferrari4.jpg" alt="Ferrari Modelo 4">
+                    <h3>Ferrari Modelo 4</h3>
+                    <p>Descripción del modelo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">Ver Detalles</a>
+                </div>
             </div>
         </div>
     </section>
@@ -306,19 +325,21 @@
     <section id="contacto" class="contacto">
         <div class="container">
             <h2>Contacto</h2>
-            <form action="procesar-contacto.php" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                <input type="submit" value="Enviar Mensaje" class="btn">
-            </form>
+            <div class="contacto-form">
+                <form action="procesar-contacto.php" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    <input type="submit" value="Enviar Mensaje" class="btn">
+                </form>
+            </div>
         </div>
     </section>
 
-    <div class="main-container">
+    <section class="main-container">
         <h1>Información sobre Ferrari</h1>
         <p>Ferrari es un fabricante italiano de automóviles de lujo y deportivos con una larga historia en la fabricación de vehículos de alto rendimiento. Conocida por su participación en la Fórmula 1, los automóviles de Ferrari destacan por su diseño distintivo, potencia y exclusividad, convirtiéndose en un símbolo de estatus y prestigio en el mundo del automovilismo de lujo.</p>
         <img src="img1.jpg" alt="img" style="max-width: 100%; height: auto;">
@@ -338,7 +359,7 @@
                 <input type="submit" value="Suscribirse">
             </form>
         </div>
-    </div>
+    </section>
 
     <footer>
         <div class="container">
@@ -347,4 +368,5 @@
     </footer>
 </body>
 </html>
+
 
