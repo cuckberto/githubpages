@@ -7,34 +7,54 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
         .main-container {
             text-align: center;
             padding: 20px;
+            background-color: #fff;
+            max-width: 800px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
         h1 {
             font-size: 24px;
+            color: #333;
         }
 
         p {
             text-align: justify;
             margin-bottom: 20px;
+            color: #666;
         }
 
         /* Estilos para el formulario */
         .subscribe-form {
             margin-top: 20px;
-            border: 1px solid #ccc;
             padding: 10px;
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
             background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .subscribe-form h2 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
         }
 
         .subscribe-form label {
             display: block;
             margin-bottom: 8px;
+            color: #555;
         }
 
         .subscribe-form input[type="email"], 
@@ -43,6 +63,9 @@
             width: calc(100% - 20px);
             padding: 8px;
             margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
 
         .subscribe-form input[type="submit"] {
@@ -66,8 +89,8 @@
     <div class="main-container">
         <h1>Información sobre Ferrari</h1>
         <p>Ferrari es un fabricante italiano de automóviles de lujo y deportivos con una larga historia en la fabricación de vehículos de alto rendimiento. Conocida por su participación en la Fórmula 1, los automóviles de Ferrari destacan por su diseño distintivo, potencia y exclusividad, convirtiéndose en un símbolo de estatus y prestigio en el mundo del automovilismo de lujo.</p>
-        <img src="img1.jpg" alt="img">
-        <audio controls>
+        <img src="img1.jpg" alt="img" style="max-width: 100%; height: auto;">
+        <audio controls style="margin-top: 20px;">
             <source src="cancion.mp3" type="audio/mpeg">
             Tu navegador no soporta el elemento de audio.
         </audio>
